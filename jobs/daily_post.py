@@ -38,6 +38,7 @@ def post_to_discord(message):
         "Content-Type": "application/json",
     }
     payload = {"content": message}
+    
     res = requests.post(url, json=payload, headers=headers)
     res.raise_for_status()
 
@@ -55,6 +56,8 @@ def main():
         + format_issues("🟨 JavaScript Issues", js_issues)
     )
 
+    print("MESSAGE LENGTH:", len(message))
+    print(message)
     post_to_discord(message)
 
 

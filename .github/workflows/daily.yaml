@@ -2,7 +2,7 @@ name: Daily Issue Finder
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # every day at 09:00 UTC
+    - cron: "0 5 * * *"   # every day at 05:00 UTC
   workflow_dispatch:     # allow manual run
 
 jobs:
