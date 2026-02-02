@@ -14,7 +14,7 @@ def search_issues(query):
         "q": query,
         "sort": "created",
         "order": "desc",
-        "per_page": 5,
+        "per_page": 20,
     }
     res = requests.get(GITHUB_SEARCH_URL, params=params)
     res.raise_for_status()
