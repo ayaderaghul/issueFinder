@@ -45,8 +45,8 @@ def post_to_discord(message):
 def main():
     since = (datetime.utcnow() - timedelta(days=1)).strftime("%Y-%m-%d")
 
-    python_issues = search_issues(f"python created:>={since} state:open")
-    js_issues = search_issues(f"javascript created:>={since} state:open")
+    python_issues = search_issues(f'python created:>={since} label:"good first issue" no:assignee state:open')
+    js_issues = search_issues(f'javascript created:>={since} label:"good first issue" no:assignee state:open')
 
     message = (
         "📌 **Daily Issue Finder**\n\n"
